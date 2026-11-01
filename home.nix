@@ -88,7 +88,7 @@ in
       set -as terminal-features ",*:hyperlinks"
 
       #  Status bar
-      set -g status-position top
+      set -g status-position bottom
 
       # Intuitive split keys
       bind | split-window -h -c "#{pane_current_path}"
