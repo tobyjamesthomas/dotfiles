@@ -45,6 +45,7 @@
       "rectangle"
       "wezterm"
       "obsidian"
+      "wispr-flow"
     ];
   };
 }
