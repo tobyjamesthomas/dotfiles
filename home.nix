@@ -34,11 +34,17 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
+    autocd = true; # Type a directory name to cd into it
+    setOptions = [
+      "AUTO_PUSHD"        # Push every visited directory onto the stack
+      "PUSHD_IGNORE_DUPS" # Keep the stack free of duplicates
+      "PUSHD_MINUS"       # cd -1 is the most recent directory
+    ];
     initContent = ''
       bindkey '^f' autosuggest-accept
     '';
     shellAliases = {
-      ".." = "cd ..";
+      "-" = "cd -";
       vim = "nvim";
       gst = "git status";
       add = "git add .";
