@@ -44,6 +44,7 @@
       "claude-code"
       "rectangle"
       "wezterm"
+      "obsidian"
     ];
   };
 }
