@@ -19,9 +19,9 @@
   system.defaults = {
     NSGlobalDomain = {
       AppleInterfaceStyle = "Dark";
-      KeyRepeat = 2;         # Fast key repeat
-      InitialKeyRepeat = 15; # Short delay before repeat
-      _HIHideMenuBar = true; # Auto-hide the menu bar
+      KeyRepeat = 2;          # Fast key repeat
+      InitialKeyRepeat = 15;  # Short delay before repeat
+      _HIHideMenuBar = false; # Always show the menu bar
       AppleShowAllExtensions = true;
     };
     dock.autohide = true;                 # Auto-hide the dock
