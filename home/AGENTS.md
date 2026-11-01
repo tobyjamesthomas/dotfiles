@@ -9,6 +9,6 @@
 - When end-to-end testing a product, be picky about the UI you see and be obsessive with pixel perfection.
   If something clearly looks off, even if it is not directly related to what you are doing, try to get it fixed along the way.
 - Apply the same high standard to engineering excellence: lint, test failures, and test flakiness.
-  If you see one, event if it is not caused by what you are working on right now, still get it fixed.
+  If you see one, even if it is not caused by what you are working on right now, still get it fixed.
 - When possible, never use acronyms for technical terms. Instead, write out the full word so there is no ambiguity.
   It's okay to use acronyms for PRD and RFC.
