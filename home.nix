@@ -93,6 +93,9 @@ in
     extraConfig = ''
       set -as terminal-features ",*:hyperlinks"
 
+      # Pass modified keys (like Shift+Enter) through to programs that ask for them
+      set -s extended-keys on
+
       #  Status bar
       set -g status-position bottom
 
