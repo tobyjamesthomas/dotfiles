@@ -72,6 +72,7 @@ in
   programs.tmux = {
     enable = true;
     mouse = true;    # Enable mouse support
+    baseIndex = 1;   # Number windows and panes from 1
 
     plugins = with pkgs.tmuxPlugins; [
       sensible
@@ -105,6 +106,9 @@ in
 
       # Keep current path for new windows
       bind c new-window -c "#{pane_current_path}"
+
+      # Close gaps in window numbers when a window is closed
+      set -g renumber-windows on
     '';
   };
 
