@@ -62,6 +62,43 @@ in
     };
   };
 
+  # tmux
+  programs.tmux = {
+    enable = true;
+    mouse = true;    # Enable mouse support
+
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+      {
+        plugin = resurrect;
+        extraConfig = ''
+          set -g @resurrect-strategy-nvim 'session'
+        '';
+      }
+      {
+        plugin = continuum;
+        extraConfig = ''
+          set -g @continuum-restore on
+          set -g @continuum-save-interval '10'
+        '';
+      }
+    ];
+
+    extraConfig = ''
+      set -as terminal-features ",*:hyperlinks"
+
+      #  Status bar
+      set -g status-position top
+
+      # Intuitive split keys
+      bind | split-window -h -c "#{pane_current_path}"
+      bind - split-window -v -c "#{pane_current_path}"
+
+      # Keep current path for new windows
+      bind c new-window -c "#{pane_current_path}"
+    '';
+  };
+
   # Edit-in-place: the real file stays in my repo, ~/.config just points at it.
   home.file.".config/wezterm".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/wezterm";
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/nvim";
