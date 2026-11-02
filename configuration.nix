@@ -43,11 +43,11 @@
     casks = [
       "claude"
       "claude-code"
-      "rectangle"
-      "wezterm"
       "obsidian"
-      "wispr-flow"
+      "rectangle"
       "spotify"
+      "wezterm"
+      "wispr-flow"
     ];
   };
 }
