@@ -47,6 +47,7 @@
       "wezterm"
       "obsidian"
       "wispr-flow"
+      "spotify"
     ];
   };
 }
