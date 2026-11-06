@@ -40,6 +40,9 @@
     onActivation.cleanup = "zap"; # Remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    brews = [
+      "herdr"
+    ];
     casks = [
       "claude"
       "claude-code"

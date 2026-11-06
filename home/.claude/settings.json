@@ -3,6 +3,9 @@
     "type": "command",
     "command": "input=$(cat); model=$(echo \"$input\" | jq -r '.model.display_name // \"unknown\"'); used=$(echo \"$input\" | jq -r '.context_window.used_percentage // empty'); if [ -n \"$used\" ]; then printf '%s | Context: %.0f%% used' \"$model\" \"$used\"; else printf '%s | Context: 0%% used' \"$model\"; fi"
   },
+  "tui": "fullscreen",
   "theme": "dark",
-  "tui": "fullscreen"
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  }
 }
