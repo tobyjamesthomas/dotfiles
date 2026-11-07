@@ -49,6 +49,7 @@
       "obsidian"
       "rectangle"
       "spotify"
+      "tailscale-app"
       "wezterm"
       "wispr-flow"
     ];
